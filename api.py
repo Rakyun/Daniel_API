@@ -24,7 +24,7 @@ dictConfig({
 })
 
 app = Flask(__name__)
-
+#Assignment 4
 @app.route("/")
 def hello_world():
     app.logger.info('Welcomee And Hello')
@@ -59,7 +59,7 @@ def save(foodname):
         "food" : foodname,
     }
     return jsonify(jsonbody)
-
+#Assignment 5
 @app.after_request
 def logging_response_code(response):
     status_tostring = response.status
