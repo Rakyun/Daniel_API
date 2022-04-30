@@ -49,11 +49,11 @@ def display_data():
         return jsonify(jsonbody)
 
 
-@app.route("/save/<name>")
+@app.route("/save/<foodname>")
 def save(foodname):
     app.logger.info("Saving food data")
     with open('food_data.txt', 'a') as f:
-        f.write('\n'+name)
+        f.write('\n'+foodname)
         f.close()
     jsonbody = {
         "food" : foodname,
@@ -65,6 +65,3 @@ def logging_response_code(response):
     status_tostring = response.status
     logging.warning("Status: %s" % status_tostring)
     return response
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=105)
