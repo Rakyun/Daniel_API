@@ -1,0 +1,8 @@
+Burger
+Fries
+Pizza
+Cake
+Chicken
+Steak
+Icecream
+Pudding
